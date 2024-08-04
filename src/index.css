@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.avatar.avatar-md {
+  width: 130px;
+  height: 130px;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.presence-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.presence-indicator.Available {
+  background-color: #3DB838;
+}
+
+.presence-indicator.Away, .BeRightBack {
+  background-color: #E7A100;
+}
+
+.presence-indicator.Busy {
+  background-color: #D13438;
+}
+
+.presence-indicator.Offline {
+  background-color: #999999;
+}
