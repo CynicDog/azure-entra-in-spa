@@ -23,12 +23,12 @@ const ExportView = () => {
         <div className="d-flex align-items-center justify-content-center vh-100">
             <div className="avatar-container">
                 <img
-                    className="avatar"
+                    className="avatar avatar-md"
                     src="https://raw.githubusercontent.com/CynicDog/azure-entra-in-spa/main/public/me.jpeg"
                     alt="User Profile"
                 />
                 {presence && (
-                    <div className={`presence-indicator ${presence}`}></div>
+                    <div className={`presence-indicator presence-indicator-md ${presence}`}></div>
                 )}
             </div>
         </div>
