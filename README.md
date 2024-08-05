@@ -7,6 +7,10 @@ C4Deployment
         Container(React, "React", "", "")
     }
 
+    Deployment_Node(teams, "Teams") {
+        Container(Teams, "Teams", "", "")
+    }
+
     Deployment_Node(azure, "Azure") {
         Deployment_Node(organizationalResources, "Organizational Resources") {
         ContainerDb(Organizational_Resources, "Organizational Resources", "")
@@ -20,10 +24,6 @@ C4Deployment
                 Container(helloworld_app, "helloworld-app", "Graph API permissions", "User.ReadWrite, Presence.ReadWrite")
             }
         }
-    }
-        
-    Deployment_Node(teams, "Teams") {
-        Container(Teams, "Teams", "", "")
     }
     
     Rel(helloworld_app, Enterprise_Application, "Exposes as")
@@ -44,5 +44,4 @@ C4Deployment
     UpdateRelStyle(React, Teams, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Service_Principal, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Teams, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
-      
 ```
