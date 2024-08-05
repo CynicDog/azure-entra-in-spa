@@ -32,12 +32,12 @@ C4Deployment
     BiRel(Service_Principal, Organizational_Resources, "Accesses")
     BiRel(Teams, Organizational_Resources, "On behalf of user")
 
-    UpdateElementStyle(azure, $borderColor="black")
-    UpdateElementStyle(github, $borderColor="black")
-    UpdateElementStyle(teams, $borderColor="black")
-    UpdateElementStyle(organizationalResources, $borderColor="black")
-    UpdateElementStyle(appRegistrations, $borderColor="black")
-    UpdateElementStyle(publishingOrganization, $borderColor="black")
+    UpdateElementStyle(azure, $borderColor="gray")
+    UpdateElementStyle(github, $borderColor="gray")
+    UpdateElementStyle(teams, $borderColor="gray")
+    UpdateElementStyle(organizationalResources, $borderColor="gray")
+    UpdateElementStyle(appRegistrations, $borderColor="gray")
+    UpdateElementStyle(publishingOrganization, $borderColor="gray")
     
     UpdateRelStyle(helloworld_app, Enterprise_Application, $textColor="white", $lineColor="white", ,$offsetX="5")
     UpdateRelStyle(Teams, Service_Principal, $textColor="white", $lineColor="white")
