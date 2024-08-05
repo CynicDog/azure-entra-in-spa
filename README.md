@@ -31,6 +31,7 @@ C4Deployment
     Rel(React, Teams, "Provides endpoint")
     BiRel(Service_Principal, Organizational_Resources, "Accesses")
     BiRel(Teams, Organizational_Resources, "On behalf of user")
+    BiRel(Enterprise_Application, Service_Principal, "")
 
     UpdateElementStyle(azure, $borderColor="gray")
     UpdateElementStyle(github, $borderColor="gray")
@@ -44,4 +45,5 @@ C4Deployment
     UpdateRelStyle(React, Teams, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Service_Principal, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Teams, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
+    UpdateRelStyle(Enterprise_Application, Service_Principal, $textColor="white", $lineColor="gray")
 ```
