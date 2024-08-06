@@ -4,7 +4,7 @@ C4Deployment
     title  
     
     Deployment_Node(github, "GitHub SPA host") {
-        Container(React, "React", "", "")
+        Container(React, "React", "Single Page Application", "")
     }
 
     Deployment_Node(teams, "Teams") {
@@ -15,7 +15,7 @@ C4Deployment
         Deployment_Node(organizationalResources, "Publishing Organization") {
             ContainerDb(Organizational_Resources, "Organizational Resources", "")
             
-            Deployment_Node(publishingOrganization, "Identity / Access Management Unit") {
+            Deployment_Node(publishingOrganization, "Local representation of registration") {
                 Container(Service_Principal, "Service Principal", "", "")
                 Container(Enterprise_Application, "Enterprise Application", "", "")        
             }
