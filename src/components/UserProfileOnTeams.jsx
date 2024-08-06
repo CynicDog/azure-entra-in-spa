@@ -47,7 +47,6 @@ const UserProfileOnTeams = () => {
                     const photoUrl = URL.createObjectURL(photoBlob);
                     setPhotoData(photoUrl);
 
-                    // Fetch user presence
                     const presenceResponse = await fetch("https://graph.microsoft.com/v1.0/me/presence", {
                         headers: {
                             Authorization: `Bearer ${accessToken}`,
