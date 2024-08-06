@@ -1,16 +1,21 @@
-import {AuthenticatedTemplate, useMsal} from "@azure/msal-react";
+import { AuthenticatedTemplate, useMsal } from "@azure/msal-react";
 
 function signOutClickHandler(instance) {
     const logoutRequest = {
-        account: instance[0]?.homeAccountId,
-        postLogoutRedirectUri: 'https://cynicdog.github.io/azure-entra-in-spa/'
+        account: instance.getAllAccounts()[0]
     };
-    instance.logoutRedirect(logoutRequest);
+    instance.logoutPopup(logoutRequest)
+        .then(() => {
+            if (window.opener && !window.opener.closed) {
+                window.close();
+            }
+        })
+        .catch(error => {
+            console.error("Logout failed: ", error);
+        });
 }
 
-// SignOutButton Component returns a button that invokes a redirect logout when clicked
 const SignOutButton = () => {
-    // useMsal hook will return the PublicClientApplication instance you provided to MsalProvider
     const { instance } = useMsal();
 
     return (
@@ -20,4 +25,4 @@ const SignOutButton = () => {
     );
 }
 
-export default SignOutButton
+export default SignOutButton;

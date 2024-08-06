@@ -12,7 +12,7 @@ const SignInButton = () => {
         const accounts = instance.getAllAccounts();
         if (accounts.length === 0) {
 
-            await instance.loginRedirect();
+            await instance.loginPopup();
         }
     };
 
