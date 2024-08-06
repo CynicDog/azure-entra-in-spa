@@ -18,12 +18,21 @@ const config = {
 
 // create PublicClientApplication instance
 const publicClientApplication = new PublicClientApplication(config);
-await publicClientApplication.initialize();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <MsalProvider instance={publicClientApplication}>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
-    </MsalProvider>
-);
+// Initialize the MSAL instance in an async function
+const initializeMSAL = async () => {
+    await publicClientApplication.initialize();
+
+    ReactDOM.createRoot(document.getElementById('root')).render(
+        <MsalProvider instance={publicClientApplication}>
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </MsalProvider>
+    );
+};
+
+// Call the async function to initialize MSAL and render the app
+initializeMSAL().catch(err => {
+    console.error("MSAL initialization failed:", err);
+});
