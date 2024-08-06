@@ -11,6 +11,9 @@ const config = {
     auth: {
         clientId: import.meta.env.VITE_AZURE_CLIENT_ID,
     },
+    cache: {
+        cacheLocation: "localStorage",
+    },
 };
 
 // create PublicClientApplication instance
