@@ -21,7 +21,7 @@ const UserProfileOnTeams = () => {
 
             if (nameParam) {
                 // Use the full email from the nameParam
-                loginHint = nameParam; // This is the full email
+                loginHint = nameParam;
             }
 
             const silentRequest = {
@@ -31,12 +31,9 @@ const UserProfileOnTeams = () => {
 
             const authenticateUser = async () => {
                 try {
-                    const loginResponse = await instance.ssoSilent(silentRequest);
-
-                    // Fetch user photo
+                    const loginResponse = await instance.ssoSilent(silentRequest); 
                     const accessToken = loginResponse.accessToken;
-
-                    // Fetch user photo
+                    
                     const photoResponse = await fetch("https://graph.microsoft.com/v1.0/me/photo/$value", {
                         headers: {
                             Authorization: `Bearer ${accessToken}`,
