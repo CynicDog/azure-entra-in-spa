@@ -48,12 +48,12 @@ C4Deployment
     UpdateRelStyle(Enterprise_Application, Service_Principal, $textColor="white", $lineColor="gray")
 ```
 <details>
-  <summary>First look in to the app (on Teams with SSO) 👀</summary>
+  <summary>on Teams with SSO 👀</summary>
   <img src="https://github.com/user-attachments/assets/0a4db79b-b849-413f-a625-289d5a947d15"></img>
 </details>
 
 <details>
-  <summary>First look in to the app (on web browser with login popup) 👀</summary>
+  <summary>on web browser with login popup 👀</summary>
   <img src="https://github.com/user-attachments/assets/9a0ddffe-efc8-4b06-a98d-6918b2798f80"></img>
   <img src="https://github.com/user-attachments/assets/6e051be3-d3bd-4259-8493-e2bdabf28f96"></img>
 </details>
