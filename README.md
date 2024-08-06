@@ -54,7 +54,6 @@ C4Deployment
 
 <details>
   <summary>First look in to the app (on web browser with login popup) 👀</summary>
-  <img src="https://github.com/user-attachments/assets/3542b9ef-8520-4b82-829a-c1693895298e"></img>
+  <img src="https://github.com/user-attachments/assets/9a0ddffe-efc8-4b06-a98d-6918b2798f80"></img>
+  <img src="https://github.com/user-attachments/assets/6e051be3-d3bd-4259-8493-e2bdabf28f96"></img>
 </details>
-
-
