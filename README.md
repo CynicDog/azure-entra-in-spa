@@ -47,3 +47,14 @@ C4Deployment
     UpdateRelStyle(Teams, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Enterprise_Application, Service_Principal, $textColor="white", $lineColor="gray")
 ```
+<details>
+  <summary>First look in to the app (on Teams with SSO) 👀</summary>
+  <img src="https://github.com/user-attachments/assets/0a4db79b-b849-413f-a625-289d5a947d15"></img>
+</details>
+
+<details>
+  <summary>First look in to the app (on web browser with login popup) 👀</summary>
+  <img src="https://github.com/user-attachments/assets/3542b9ef-8520-4b82-829a-c1693895298e"></img>
+</details>
+
+
