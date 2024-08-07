@@ -10,6 +10,21 @@ const UserProfile = () => {
     const [apiData, setApiData] = useState(null);
     const [presenceData, setPresenceData] = useState(null);
 
+    function signOutClickHandler(instance) {
+        const logoutRequest = {
+            account: instance.getAllAccounts()[0]
+        };
+        instance.logoutPopup(logoutRequest)
+            .then(() => {
+                if (window.opener && !window.opener.closed) {
+                    window.close();
+                }
+            })
+            .catch(error => {
+                console.error("Logout failed: ", error);
+            });
+    }
+
     useEffect(() => {
         const accessTokenRequest = {
             scopes: ["user.read", "User.ReadWrite", "Presence.Read", "Presence.Read.All"],
@@ -255,7 +270,7 @@ const UserProfile = () => {
         <AuthenticatedTemplate>
             {apiData ? (
                 <div className="avatar-container">
-                    <img className="avatar" src={apiData} alt="User Profile" />
+                    <img className="avatar" src={apiData} alt="User Profile" onClick={() => signOutClickHandler(instance)} style={{'cursor': 'pointer'}} />
                     {presenceData && (
                         <div className={`presence-indicator ${presenceData.availability}`}></div>
                     )}
