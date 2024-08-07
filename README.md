@@ -47,6 +47,40 @@ C4Deployment
     UpdateRelStyle(React, Organizational_Resources, $textColor="white", $lineColor="gray", $offsetY="-15", $offsetX="-40")
     UpdateRelStyle(Enterprise_Application, Service_Principal, $textColor="white", $lineColor="gray")
 ```
+
+## SSO auth flow 
+
+```mermaid
+flowchart TD
+    subgraph Azure 
+        A(App Registrations) 
+    end 
+    
+    B[Teams]
+    
+    subgraph GitHub Pages
+        C([React web app])
+        D([MSAL])
+    end 
+
+    subgraph Publishing Organization 
+        E(Organizational \nResources)
+        F(Service \nPrincipal)
+    end 
+
+    G([user]) --> |email login hint|B
+
+    A --- |A trust over Application ID URI|B
+    A -. Sends Access Token at Runtime (SSO) .-> B
+    B -. Provides endpoint with login hint .-> C
+    C <--> D
+    D <--> F
+    E --> F
+    F --> E
+
+    linkStyle 0,2,3,4,5,6,7 stroke-width:.3px;
+```
+
 <details>
   <summary>on Teams with SSO 👀</summary>
   <img src="https://github.com/user-attachments/assets/0a4db79b-b849-413f-a625-289d5a947d15"></img>
