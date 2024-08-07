@@ -13,7 +13,6 @@ const EntryPoint = () => {
                 <div className="mx-4">
                     <SignOutButton />
                 </div>
-                <DarkModeSwitch />
             </div>
             {/*<FetchHelloWorldButton />*/}
             <div className="d-flex align-items-center justify-content-center vh-100">
@@ -23,6 +22,11 @@ const EntryPoint = () => {
                         <h4 className="merriweather-bold">in React Application with MSAL</h4>
                     </UnauthenticatedTemplate>
                     <div className="my-4">
+                        <div className="d-flex">
+                            <div className="ms-auto">
+                                <DarkModeSwitch />
+                            </div>
+                        </div>
                         <UserProfile />
                     </div>
                     <div className="mt-4">
