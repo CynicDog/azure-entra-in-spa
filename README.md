@@ -75,10 +75,9 @@ flowchart TD
     B -. Provides endpoint with login hint .-> C
     C <--> D
     D <--> F
-    E --> F
-    F --> E
-
-    linkStyle 0,2,3,4,5,6,7 stroke-width:.3px;
+    E <--> F
+    
+    linkStyle 0,2,3,4,5,6 stroke-width:.3px;
 ```
 
 <details>
