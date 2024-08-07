@@ -56,11 +56,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run predeploy
 
-      # - name: Configure git to use HTTPS and set credentials
-      #   run: |
-      #     git config user.name "${{ github.actor }}"
-      #     git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
-      #     git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+      - name: Configure git to use HTTPS and set credentials
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Deploy to GitHub Pages
         env:
