@@ -9,11 +9,12 @@ const EntryPoint = () => {
 
     return (
         <>
-            <div className="d-flex justify-content-end align-items-center mt-3">
+            {/*<div className="d-flex justify-content-end align-items-center mt-3">
                 <div className="mx-4">
                     <SignOutButton />
+                    <DarkModeSwitch />
                 </div>
-            </div>
+            </div>*/}
             {/*<FetchHelloWorldButton />*/}
             <div className="d-flex align-items-center justify-content-center vh-100">
                 <div>
