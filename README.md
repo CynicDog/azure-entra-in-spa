@@ -108,7 +108,7 @@ flowchart TD
         end 
 
         J[Teams \npublished for Organization]
-        K([user]) ---> J
+        K([user]) ---> |email login hint|J
         E(Organizational \nResources)
     end 
 
