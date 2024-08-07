@@ -76,7 +76,7 @@ flowchart TD
     A -. Sends Access Token at Runtime (SSO) .-> B
     B -. Provides endpoint with login hint .-> C
     C <--> D
-    D <--> F
+    D <-- Graph API remote calls --> F
     E <--> F
     
     linkStyle 0,2,3,4,5,6 stroke-width:.3px;
