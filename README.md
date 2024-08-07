@@ -116,9 +116,9 @@ flowchart TD
     A --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|B
     B --> |Provides endpoint with login hint|C
     C <--> D
-    D --> F
+    D <-- Graph API remote calls --> F
     F <--> E
-    D --> I
+    D <-- Graph API remote calls --> I
     J --> |Provides endpoint with login hint|C
     A --- |Exposes as multi-tenant app|L
     L --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|J
