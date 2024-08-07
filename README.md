@@ -1,3 +1,5 @@
+#### Read more about the project in [my article](https://cynicdog.github.io/posts/azure-entra-in-spa/) 📰
+
 ## Deployment Architecture 
 ```mermaid
 C4Deployment
