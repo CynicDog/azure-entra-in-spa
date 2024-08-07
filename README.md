@@ -79,6 +79,51 @@ flowchart TD
     
     linkStyle 0,2,3,4,5,6 stroke-width:.3px;
 ```
+## Publishing the application as Multi-tenant Application in other tenants  
+```mermaid
+flowchart TD
+    subgraph App Owning Tenant 
+        A(App Registrations) 
+
+        subgraph Local representation of registration
+            I(Service \nPrincipal)
+        end 
+        H(Organizational \nResources)
+        B[Teams \npublished for Organization]
+        G([user]) ----> |email login hint|B
+    end
+    
+    subgraph GitHub Pages
+        C([React web app])
+        D([MSAL])
+    end 
+
+    subgraph App Borrowing Tenant
+        L[Enterprise Application]
+        
+        subgraph Local representation of registration
+            F(Service \nPrincipal)
+        end 
+
+        J[Teams \npublished for Organization]
+        K([user]) ---> J
+        E(Organizational \nResources)
+    end 
+
+    
+    A --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|B
+    B --> |Provides endpoint with login hint|C
+    C <--> D
+    D --> F
+    F <--> E
+    D --> I
+    J --> |Provides endpoint with login hint|C
+    A --- |Exposes as multi-tenant app|L
+    L --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|J
+    I <--> H
+
+    linkStyle 0,1,3,4,5,6,7,8,11 stroke-width:.3px;
+```
 
 <details>
   <summary>on Teams with SSO 👀</summary>
