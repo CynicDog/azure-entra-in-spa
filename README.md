@@ -77,8 +77,8 @@ flowchart TD
     end 
 
     subgraph Publishing Organization 
-        E(Organizational \nResources)
-        F(Service \nPrincipal)
+        E(Organizational Resources)
+        F(Service Principal)
     end 
 
     G([user]) --> |email login hint|B
@@ -99,10 +99,10 @@ flowchart TD
         A(App Registrations) 
 
         subgraph Local representation of registration
-            I(Service \nPrincipal)
+            I(Service Principal)
         end 
-        H(Organizational \nResources)
-        B[Teams \npublished for Organization]
+        H(Organizational Resources)
+        B[Teams published for Organization]
         G([user]) ----> |email login hint|B
     end
     
@@ -115,16 +115,16 @@ flowchart TD
         L[Enterprise Application]
         
         subgraph Local representation of registration
-            F(Service \nPrincipal)
+            F(Service Principal)
         end 
 
-        J[Teams \npublished for Organization]
+        J[Teams published for Organization]
         K([user]) ---> |email login hint|J
-        E(Organizational \nResources)
+        E(Organizational Resources)
     end 
 
     
-    A --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|B
+    A --- |A trust over Application ID URI Sends Access Token at Runtime via SSO|B
     B --> |Provides endpoint with login hint|C
     C <--> D
     D <-- Graph API remote calls --> F
@@ -132,7 +132,7 @@ flowchart TD
     D <-- Graph API remote calls --> I
     J --> |Provides endpoint with login hint|C
     A --- |Exposes as multi-tenant app|L
-    L --- |A trust over Application ID URI \nSends Access Token at Runtime via SSO|J
+    L --- |A trust over Application ID URI Sends Access Token at Runtime via SSO|J
     I <--> H
 
     linkStyle 0,1,3,4,5,6,7,8,11 stroke-width:.3px;
